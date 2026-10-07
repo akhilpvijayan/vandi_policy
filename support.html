@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help & Support - Vandi (Kerala Bus Route Mapping)</title>
+  <meta name="description" content="Official user support, FAQs, and feedback center for Vandi on Google Play Store.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+Malayalam:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #059669;
+      --primary-light: #10B981;
+      --accent: #F59E0B;
+      --bg: #0A0F1D;
+      --surface: #111827;
+      --card-border: rgba(255, 255, 255, 0.08);
+      --text: #F3F4F6;
+      --text-muted: #9CA3AF;
+      --tag-bg: rgba(59, 130, 246, 0.12);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #0A0F1D;
+      color: var(--text);
+      line-height: 1.7;
+    }
+    .nav-bar {
+      border-bottom: 1px solid var(--card-border);
+      background: rgba(10, 15, 29, 0.85);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    .nav-content {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .brand-icon {
+      font-size: 22px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--primary-light);
+    }
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+    .header-box {
+      margin-bottom: 40px;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 30px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      background: var(--tag-bg);
+      color: #60A5FA;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      border: 1px solid rgba(59, 130, 246, 0.25);
+    }
+    h1 {
+      font-size: 32px;
+      font-weight: 800;
+      margin-bottom: 8px;
+      color: #FFFFFF;
+    }
+    .meta-text {
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+    .content-card {
+      background: var(--surface);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 36px 30px;
+      margin-bottom: 30px;
+    }
+    h2 {
+      font-size: 20px;
+      color: #60A5FA;
+      margin: 32px 0 14px;
+      font-weight: 700;
+    }
+    h2:first-of-type {
+      margin-top: 0;
+    }
+    p {
+      color: #D1D5DB;
+      font-size: 15px;
+      margin-bottom: 16px;
+    }
+    .faq-item {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin-bottom: 14px;
+    }
+    .faq-question {
+      font-weight: 700;
+      color: #FFFFFF;
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+    .faq-answer {
+      color: #9CA3AF;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .contact-card {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      background: linear-gradient(135deg, rgba(5, 150, 105, 0.15), rgba(17, 24, 39, 0.8));
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      border-radius: 14px;
+      padding: 24px;
+      margin-top: 30px;
+    }
+    .contact-icon {
+      font-size: 36px;
+    }
+    .contact-text h3 {
+      font-size: 18px;
+      color: #FFF;
+      margin-bottom: 4px;
+    }
+    .contact-text p {
+      margin-bottom: 0;
+      font-size: 14px;
+      color: #D1D5DB;
+    }
+    .contact-text a {
+      color: var(--primary-light);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    footer {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 13px;
+      border-top: 1px solid var(--card-border);
+      padding: 30px 20px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav-bar">
+    <div class="nav-content">
+      <a href="index.html" class="brand">
+        <span class="brand-icon">🚌</span>
+        <span>Vandi (വണ്ടി)</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Overview</a>
+        <a href="privacy-policy.html">Privacy</a>
+        <a href="terms-and-conditions.html">Terms</a>
+        <a href="delete-account.html">Account Deletion</a>
+        <a href="support.html" class="active">Support</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="header-box">
+      <span class="badge">App Support & Community FAQs</span>
+      <h1>Help & Support</h1>
+      <p class="meta-text"><strong>Application:</strong> Vandi (Kerala Bus Route Mapping)</p>
+    </div>
+
+    <div class="content-card">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <div class="faq-question">1. How do I find bus timings and stops?</div>
+        <div class="faq-answer">
+          You can use the home search bar to enter origin and destination stops (e.g. Aluva to Perumbavoor) or vehicle registration numbers. The app displays sequenced stops, estimated timings, and operator class (KSRTC Ordinary/Fast or Private Bus).
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">2. Can I use Vandi without creating an account?</div>
+        <div class="faq-answer">
+          Yes! All search, timetable discovery, stop inspection, and map viewing features work completely in <strong>Guest Mode</strong> without signing in. You only need to sign in with Google if you want to propose new routes or submit updates.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">3. Why does submitting a route require photo proof?</div>
+        <div class="faq-answer">
+          To maintain high trust and eliminate inaccurate timings, our community moderation guidelines require a photo of the bus route board or vehicle exterior. Submissions are reviewed before becoming publicly listed.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">4. How can I report an incorrect bus timing or missing stop?</div>
+        <div class="faq-answer">
+          On any bus detail screen, tap the "Dispute / Inaccurate" button to notify the community and trigger review. You can also propose updated stop sequences directly through the "Edit Route" option.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">5. How do I delete my profile?</div>
+        <div class="faq-answer">
+          Visit our <a href="delete-account.html" style="color: var(--primary-light);">Account Deletion Page</a> to request deletion of your account and personal contributor history.
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-icon">✉️</div>
+        <div class="contact-text">
+          <h3>Need Further Assistance?</h3>
+          <p>
+            For technical support, bug reports, or general inquiries, email us at:
+            <br>
+            <a href="mailto:support@vandi.community">support@vandi.community</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 Vandi (വണ്ടി). Open-source community initiative for Kerala transit.</p>
+  </footer>
+</body>
+</html>

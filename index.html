@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vandi (വണ്ടി) - Official App & Legal Center</title>
+  <meta name="description" content="Official legal documentation, privacy policy, terms of service, and support portal for Vandi - Kerala Bus Route Mapping Application.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+Malayalam:wght@500;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #059669;
+      --primary-light: #10B981;
+      --accent: #F59E0B;
+      --bg: #0A0F1D;
+      --card-bg: rgba(17, 24, 39, 0.75);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --card-hover-border: rgba(16, 185, 129, 0.4);
+      --text: #F9FAFB;
+      --text-muted: #9CA3AF;
+      --danger: #EF4444;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(circle at 50% 0%, #132238 0%, #0A0F1D 70%);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.6;
+    }
+    .wrapper {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+      width: 100%;
+    }
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .logo-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 72px;
+      height: 72px;
+      background: linear-gradient(135deg, #059669, #047857);
+      border-radius: 20px;
+      font-size: 36px;
+      box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.4);
+      margin-bottom: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    h1 {
+      font-size: 38px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+      background: linear-gradient(to right, #FFFFFF, #E2E8F0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .malayalam-title {
+      font-family: 'Noto Sans Malayalam', sans-serif;
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+    p.lead {
+      color: var(--text-muted);
+      font-size: 17px;
+      max-width: 620px;
+      margin: 0 auto;
+    }
+    .play-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 16px;
+      padding: 6px 14px;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      border-radius: 30px;
+      color: var(--primary-light);
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .card {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      padding: 28px 24px;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--primary-light), transparent);
+      opacity: 0;
+      transition: opacity 0.25s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: var(--card-hover-border);
+      box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.4);
+    }
+    .card:hover::before {
+      opacity: 1;
+    }
+    .card-icon {
+      font-size: 28px;
+      margin-bottom: 16px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .card-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #FFFFFF;
+    }
+    .card-desc {
+      color: var(--text-muted);
+      font-size: 14px;
+      flex-grow: 1;
+      margin-bottom: 20px;
+    }
+    .card-link {
+      color: var(--primary-light);
+      font-weight: 600;
+      font-size: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .card-link svg {
+      transition: transform 0.2s;
+    }
+    .card:hover .card-link svg {
+      transform: translateX(4px);
+    }
+    .info-banner {
+      background: rgba(245, 158, 11, 0.08);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      border-radius: 16px;
+      padding: 20px 24px;
+      margin-top: 40px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .info-banner-icon {
+      font-size: 24px;
+      line-height: 1;
+    }
+    .info-banner-text h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+    .info-banner-text p {
+      color: #D1D5DB;
+      font-size: 14px;
+    }
+    footer {
+      margin-top: auto;
+      text-align: center;
+      padding: 30px 20px;
+      border-top: 1px solid var(--card-border);
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+    footer a {
+      color: var(--primary-light);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="logo-badge">🚌</div>
+      <h1>Vandi</h1>
+      <div class="malayalam-title">വണ്ടി • Kerala Bus Route Mapping</div>
+      <p class="lead">
+        Community-driven transit mapping and real-time route discovery for private buses and KSRTC across Kerala.
+      </p>
+      <div class="play-badge">
+        <span>✓ Google Play Policy & Legal Compliance Portal</span>
+      </div>
+    </header>
+
+    <div class="grid">
+      <!-- Privacy Policy -->
+      <a href="privacy-policy.html" class="card" id="privacy-card">
+        <div class="card-icon">🔒</div>
+        <div class="card-title">Privacy Policy</div>
+        <div class="card-desc">
+          Explains how Vandi collects, handles, and protects user data, Google OAuth authentication, camera permissions, and route photos.
+        </div>
+        <div class="card-link">
+          Read Privacy Policy
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+
+      <!-- Terms of Service -->
+      <a href="terms-and-conditions.html" class="card" id="terms-card">
+        <div class="card-icon">📜</div>
+        <div class="card-title">Terms & Conditions</div>
+        <div class="card-desc">
+          Terms governing app usage, community crowdsourcing guidelines, schedule disclaimer, and contributor verification rules.
+        </div>
+        <div class="card-link">
+          Read Terms
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+
+      <!-- Account & Data Deletion -->
+      <a href="delete-account.html" class="card" id="deletion-card">
+        <div class="card-icon">🗑️</div>
+        <div class="card-title">Data & Account Deletion</div>
+        <div class="card-desc">
+          Google Play Data Safety mandate: Request deletion of your Google-linked profile, submitted route proofs, and stored account information.
+        </div>
+        <div class="card-link">
+          Request Account Deletion
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+
+      <!-- Support & Contact -->
+      <a href="support.html" class="card" id="support-card">
+        <div class="card-icon">💬</div>
+        <div class="card-title">Help & Support</div>
+        <div class="card-desc">
+          Have an inquiry, feedback, or transit data question? Contact the Vandi moderation and maintenance team.
+        </div>
+        <div class="card-link">
+          Get Support
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+    </div>
+
+    <div class="info-banner">
+      <div class="info-banner-icon">ℹ️</div>
+      <div class="info-banner-text">
+        <h3>Google Play Console Links Guide</h3>
+        <p>
+          For your Play Store store listing:
+          <br>• <strong>Privacy Policy URL:</strong> provide link to <code>privacy-policy.html</code>
+          <br>• <strong>Account Deletion URL:</strong> provide link to <code>delete-account.html</code> (or <code>data-deletion.html</code>)
+          <br>• <strong>App Support URL:</strong> provide link to <code>support.html</code>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 Vandi (വണ്ടി). Open-source community initiative for Kerala transit.</p>
+  </footer>
+</body>
+</html>
